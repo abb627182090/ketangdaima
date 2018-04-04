@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        #but {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100px;
+            width: 100px;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;;
+        }
+
+        #muner {
+            position: fixed;
+            width: 100px;
+            border: 1px solid;
+            background-color: darkgray;
+
+        }
+        .sss {
+            text-align:center ;
+
+        }
+       .sss:hover{
+            background-color: #3b6aa2;
+        }
+
+    </style>
+</head>
+<button id="but">点我试试</button>
+<div id="hah"></div>
+<div id="muner" style="display: none">
+
+         <ul class="sss">选择</ul>
+    <hr>
+         <ul class="sss">刷新</ul>
+        <hr>
+         <ul class="sss">粘贴</ul>
+    <hr>
+
+         <ul class="sss">小工具</ul>
+    <hr>
+
+         <ul class="sss">属性</ul>
+
+</div>
+<body>
+<script>
+    /*   事件3要素1、 事件源
+     2、事件本身
+     3、事件的处理逻辑*/
+    var but = document.querySelector('#but');
+    but.draggable = true;
+
+    but.onclick = function (e) {
+        console.log(e);
+    };
+
+    //    but.ondrag = function () {
+    //        alert(111);
+    //    };
+    document.body.oncontextmenu = function (e) {
+        e.stopPropagation(); //取消冒泡
+        e.preventDefault();//取消浏览器的默认行为
+        muner.style.display='block';
+
+        muner.style.top = e.clientY + 'px';
+        muner.style.left = e.clientX + 'px';
+        /*var tb = document.getElementById('muner');
+        if (tb.style.display == 'none') {
+            tb.style.display = 'block';
+        }
+        else {
+            tb.style.display = 'none'
+        }
+        ;*/
+        document.body.onclick=function(){
+            muner.style.display="none";
+        }
+
+
+
+    };
+
+</script>
+
+</body>
+</html>

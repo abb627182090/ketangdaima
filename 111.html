@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="tbl"></table>
+<input type="text" oninput="haha(this)">
+<h1 id="alert"></h1>
+<script>
+var hh=document.getElementById("alert");
+
+    function  haha(d){
+var c='';
+        for(var i=0;i< d.value.length;i++){
+       c= String.fromCharCode(d.value.charCodeAt(i)-32);
+        }
+
+        hh.innerHTML+=c;
+    }
+
+    var users=[
+        {name:'张三',age:19,sex:'男'},
+        {name:'莉莉丝',age:18,sex:'女'},
+        {name:'张五',age:18,sex:'男'},
+        {name:'张六',age:20,sex:'男'},
+        {name:'张七',age:10,sex:'男'},
+    ];
+ users=users.filter(function(y,u,p){
+        return y.age<50 && y,age>18;
+
+    });
+
+ users.sort(function(a,b){
+
+       var r= b.age-a.age;
+         if(r==0){
+             return(b.sex.charCodeAt(0)- a.sex.charCodeAt(0));
+         }
+         return r;
+    });
+     var ShenXiao = ['狗', '鸡', '猴', '羊', '马', '蛇', '龙', '兔', '虎', '牛', '鼠', '猪'];
+   function showTable(){/*建立数据和表格之间的映射*/
+        var str="";
+       for(var i in users){
+
+           str+="<tr>"
+           for(var j in users[i]){
+               str+="<td>"+users[i][j]+"</td>"
+           }
+           str+=`<td>${ShenXiao[users[i].age%12]}</td><td>
+        <a href="javascript:del(${i})">删除</a>|<a href="javascript:update(${i})">修改</a>
+        </td>
+        </tr>`
+    }
+         tbl.innerHTML+=str;
+   }
+    showTable();
+
+</script>
+
+</body>
+</html>

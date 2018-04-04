@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+ body{
+      font-size:12px;
+    }
+    #one,#two{
+      width:30px;
+      background-color:#CCCCFF;
+    }
+    #three{
+      border:none;
+      background:#CCCCCC;
+    }
+    label{
+      font-size:12px;
+      font-weight:bold;
+    }
+    </style>
+</head>
+<body>
+      <!--&lt;!&ndash;  <div><input type="text" id="jiage"></div>
+       <button onclick="jisuan">折后价</button>
+        <div><input type="text" id="'zhehou"></div>-->
+        <input type="text" id="one"/>
+   <label> 折后 </label>
+   <!--<input type="text" id="two"/>-->
+   <label> = </label>
+   <input type="button" value="?" id="three"  onclick="addNumber()"/>
+
+<script>
+function addNumber(){
+       //第一个加数
+      var a = parseInt(document.getElementById("one").value);
+      //第二个加数
+      var b = 10;
+      //求和
+    var d = 0.75;
+      var c = a *d-b;
+      //将结果赋给button中的Value
+      document.getElementById("three").value = c;
+   }
+
+    //判断这个东西是该打折还是满减；
+   // 如果他没满200就是打7.5折
+    // 否则就是打7.5折后在减去10元
+</script>
+
+</body>
+</html>

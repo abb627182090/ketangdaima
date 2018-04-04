@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .haha{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform:
+		}
+
+        #tutu {
+            width: 200px;
+            height: 200px;
+        }
+
+        .left {
+            position: absolute;
+            left: 10px;
+        }
+
+        .right {
+            position: absolute;
+            right: 10px;
+        }
+
+        .guanbi {
+            border-radius: 100%;
+            position: relative;
+            right: 20px;
+            bottom: 140px;
+            width: 25px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="tutu" class="left" onclick="taozou(this)"><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+    <button class="guanbi">X</button>
+</div>
+<script>
+    function taozou(a) {
+        //console.log(a);//这个，自己
+
+
+        // 判断当前这个东西在哪里，
+        if (a.classList.contains('left')) {
+            // 	如果他在左边，我就让他去右边，
+            a.classList.remove('left');
+            a.classList.add('right');
+        } else {
+            // 	否则我就让他去左边
+            a.classList.remove('right');
+            a.classList.add('left');
+        }
+    }
+var mun=0;
+    	setInterval(function () {
+			var dd = document.querySelector("h1");
+
+			 if(num == 5){
+			 	dd.classList.add('haha');
+			 	dd.id = 'title';
+			 }
+
+		},2000);
+    var mun=0;
+    setInterval(function(){
+        var zz=document.getElementById('tutu')
+        if(++mun%2==0){
+            zz.style.transition='all 5s';
+            zz.style.transform='translate(0,0)';
+        }else{
+            zz.style.transition='all 5s';
+            zz.style.transform='translate(0,450px)';
+        }
+    },5000)
+
+
+</script>
+
+</body>
+</html>

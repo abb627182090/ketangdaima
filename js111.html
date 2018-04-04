@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .haha{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        #title{
+            font-size: 100px;
+        }
+        .left {
+            position: absolute;
+            left:10px;
+        }
+        .right {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<h1 onclick="taozou(this)" class="left"> </h1> <!--负责也页面的内容-->
+<div id="zzz"></div>
+
+<script style="text/javascript">  /*javascript负责页面的动态效果，并且可以干其他两种技术能干的事情*/
+//  有三个要素：数据处理，输入，输出.
+// 应用程序的主要区域就是操作内存
+    /*innerHTML 内部的HTML*/
+/*
+aa.classlist.add('hehe') 添加CSS
+aa.classlist.remove()   移除CSS
+*/
+/*aa.id='title'*/
+//number,string（字符串）,Boolean,undefined（没设置)。null （空的指针）
+
+//数据的处理，-----运算
+// 数学运算：+-/* （%取余数）
+// 逻辑运算：%% 于||或 ！非
+// 关系运算：< ,>,=, >= ,!=,==
+//赋值运算：= += -= *= /= %= == ++B
+
+
+
+function taozou(a) {
+    console.log(a);/*这个，自己 */
+//判断当前 这个东西在哪里，
+    if ( a.classList.contains('left')) {
+         a.classList.remove('left');
+         a.classList.add('right');
+    }else{
+         a.classList.remove('right');
+        a.classList.add('left');
+    }
+    // 如果他在左边我就 要他去右边，否则我就让他去左边。
+
+}
+document.onscroll=function(e){
+    e.stopPropagation();
+    alert('弹出弹框了')
+}
+
+
+
+    alert('我的javascript');
+    /*setTimeout(,); 延迟事件 */
+var mun=0; /*声明变量的格式*/ /*只能够变量明写前面*/
+    setInterval(function(){
+        var dd=document.querySelector('h1');
+        if(mun++%2==0) {
+            dd.innerHTML='要看哭不乖钳床';
+            dd.style.color='pink';
+        }else{
+            dd.innerHTML='试试速度速度是';
+            dd.style.color='#8f0';
+        }
+       /* if(mun==5){
+            dd.classList.add('haha');
+            dd.id='title';
+        }*/
+    },2000);         /* 周期事件*/
+
+</script>
+
+</body>
+</html>

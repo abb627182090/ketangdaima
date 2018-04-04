@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+回调作业
+
+房子交房了，请如下的装修工人来入场装修
+水电工
+泥工
+木工
+油漆工
+来时给他们钥匙
+<script>
+  var sdg="水电工"; var ys="拿到了钥匙";
+  var ng="泥工"; var zx="就开始了装修";
+  var mg="木工";
+  var yqg="油漆工";
+  sdg.split().map(function(){
+      sdg.split().map(function(){
+      return sdg+=ys;
+      });
+      return sdg+=zx;
+  });
+
+  console.log(sdg);
+
+  ng.split().map(function(){
+      ng.split().map(function(){
+      return ng+=ys;
+      });
+      return ng+=zx;
+  });
+  console.log(ng);
+
+  mg.split().map(function() {
+      mg.split().map(function () {
+      return mg += ys;
+      });
+      return mg += zx;
+  });
+  console.log(mg);
+
+  yqg.split().map(function() {
+      yqg.split().map(function () {
+          return yqg += ys;
+      });
+      return yqg += zx;
+  });
+  console.log(yqg);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

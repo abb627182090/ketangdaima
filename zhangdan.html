@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <style>
+        * {
+            maigin: 0;
+            padding: 0;
+        }
+
+        #tab {
+
+        }
+
+        .first {
+            background-color: pink;
+            width: 300px;
+            height: 30px;
+        }
+
+        .second {
+            background-color: rgba(151, 205, 70, 0.43);
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body onload="changeColor()">
+<table id="tab" border="1" align="center">
+    <tr>
+        <td>商品名</td>
+        <td>数量</td>
+        <td>价格</td>
+        <td>总价</td>
+    </tr>
+    <tr>
+        <td>乔丹牌篮球鞋</td>
+        <td>1双</td>
+        <td>998元</td>
+        <td>998元</td>
+    </tr>
+    <tr>
+        <td>黑人牙膏</td>
+        <td>5支</td>
+        <td>20元/支</td>
+        <td>100元</td>
+    </tr>
+    <tr>
+        <td>金骏眉顶级</td>
+        <td>1.25两</td>
+        <td>328元/两</td>
+        <td>410元</td>
+    </tr>
+
+
+</table>
+
+<script>
+
+    function changeColor() {
+
+        var mytableRows = document.getElementById('tab').rows;
+        var count = mytableRows.length;
+        for (var i = 0; i < count; i++) {
+            if (i % 2 == 0) {
+                mytableRows[i].setAttribute("class", "first");
+            }
+            else {
+                mytableRows[i].setAttribute("class", "second");
+            }
+
+        }
+    }
+</script>
+
+</body>
+</html>

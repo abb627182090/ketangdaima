@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        #tbl {
+            width:100%;
+            height: 30%;
+            background: #74ff2f;
+        }
+      td{
+            border:1px solid orangered;
+            text-align: center;
+        }
+        .queding {
+            top: 10px;
+         position: relative;
+        }
+
+
+
+
+        </style>
+
+</head>
+<body>
+<table id="tbl">
+    <tr>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>性别</td>
+        <td>段位</td>
+        <td>编辑</td>
+    </tr>
+</table>
+  <button onclick="add()">添加</button>
+<div class="item">
+<form id="ff" style="display:none">
+      <div ckass>
+    <label>姓名：</label><input type="text"  id="unname" >
+          </br>
+
+    <label>年龄：</label><input type="number" name="age" id="n1">
+        </div>
+
+    <div >
+
+    男<input   type="radio" name="sex" value="男" checked>
+    女<input  type="radio" name="sex" value="女">
+    </div>
+     <div>
+
+    <select name="duanwei" id="wangzhe">
+         <option value="青铜">青铜</option>
+        <option value="白银">白银</option>
+        <option value="黄金">黄金</option>
+        <option value="铂金">铂金</option>
+        <option value="王者">王者</option>
+    </select>
+        </div>
+    <div>
+ <input class='queding' type="button" value="确定" onclick="addTr()">
+</div>
+
+</form>
+ </div>
+
+
+<script>
+    var tbl=document.getElementById('tbl');
+       var mun=0;
+
+    var str=`<tr>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>性别</td>
+        <td>段位</td>
+         <td><a>删除</a><a>更新</a></td>
+    </tr>`;
+
+
+    function add(){
+        var ff=document.getElementById('ff');
+        ff.style.display='block';
+         //tbl.innerHTML+='str'
+    }
+
+    function addTr(){
+        var ff=document.getElementById('ff');
+        var str=`<tr id="haha${++mun}">
+        <td>${ff.unname.value}</td>
+        <td>${ff.age.value}</td>
+        <td>${ff.sex.value}</td>
+        <td>${ff.duanwei.value}</td>
+        <td><a href="javascript:del(${mun})">删除</a>
+        |<a href="javascript:compile(this)">编辑</a></td>
+    </tr>`;
+        tbl.innerHTML+=str;
+        ff.style.display='none';
+    }
+    function del(abc){
+        var tr = document.getElementById("haha"+abc);
+        tr.remove();
+    }
+    function compile(){
+ var ff=document.getElementById('ff');
+        ff.style.display='block';
+    }
+
+
+
+
+//    tbl.innerHTML+=''
+</script>
+
+</body>
+</html>

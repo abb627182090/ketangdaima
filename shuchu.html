@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接收用户的输入</title>
+    <style>
+        .form-item {
+            margin:10px 0;
+
+        }
+        .form-item input {
+            height: 25px;
+            width:345px;
+            border-radius: 5px;
+
+
+        }
+        .form-item label{
+            width:100px;
+            height:30px;
+            display: inline-block;
+            text-align: right;
+            font-weight: bold;
+            color:#333;
+        }
+        input[type=radio] {
+            width: 30px;
+
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="form-item">
+    <label for="age">年龄:</label>
+    <input id='age' type="text" name="age">
+
+    </div>
+      <div class="form-item">
+    <label for="pass">密码:</label>
+    <input id='pass' type="password" name="pass">
+
+    </div>
+    <div class="form-item">
+    <label for="pass">性别:</label>
+    男<input  class='' type="radio" name="sex" value="man">
+   女<input  type="radio" name="sex" value="woman">
+
+
+    </div>
+    <div class="form-item">
+        <label></label>
+      <input type="button" value="提交" onclick="subform()">
+        </div>
+<script>
+    function subform(){
+        alert('哎呀！被点了！');
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function temp(){
+        alert(111);
+    };
+
+    var d=temp;
+    d();//函数可以赋值给一个变量
+
+    function add(a,b){
+        a+=20;
+        alert(a+b);
+    };
+    add(100,88);//方法参数的赋值就像变量的赋值一样
+
+    var e=200;
+
+
+    function suibian(a,b,cb){
+        function dapaidang(aaa){
+            return aaa;
+        }
+        function haha(cb){
+            return cb;
+        }
+        haha(dapaidang(cb))(a,b);
+    };
+
+    suibian(87,13,add);
+
+//房子交房了，请如下的装修工人来入场装修  水电工 泥工 木工 油漆工 把钥匙给他们
+    function ruchang(){
+    function key(a){
+        return a;
+    }
+};
+    function tuichang(){
+
+    };
+</script>
+
+
+</body>
+</html>

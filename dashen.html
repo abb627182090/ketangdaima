@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<table id="tab">
+
+</table>
+<button onclick="t()">添加</button>
+<button onclick="tj()">添加用户</button>
+<form id="up">
+	姓名:<input type="text" name="name"><br>
+	年龄:<input type="text" name="age"><br>
+	性别:男<input type="radio" name="sex" value="男">
+	女<input type="radio" name="sex" value="女"><br>
+	级别:<select name="grade">
+	<option value="青铜">青铜</option>
+	<option value="白银">白银</option>
+	<option value="黄金">黄金</option>
+	<option value="铂金">铂金</option>
+	<option value="钻石">钻石</option>
+	<option value="大师">大师</option>
+</select><br>
+</form>
+<button onclick="qd()">确定</button>
+<script type="text/javascript">
+    var users=[
+        {name:"张三",age:18,sex:"男",grade:"黄金"},
+        {name:"李四",age:16,sex:"男",grade:"白银"},
+        {name:"王五",age:22,sex:"男",grade:"铂金"},
+        {name:"钱钱",age:13,sex:"女",grade:"黄金"},
+    ];
+    function showTable() {
+        var str=`
+	<tr>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>段位</th>
+	</tr>`;
+        for (var i in users) {
+            str+="<tr>"
+            for (var j in users[i]) {
+                str+="<td>"	+users[i][j]+"</td>"
+            }
+            str+=`<td>
+	<a href="javascript:del(${i})">×</a>|<a href="javascript:ipdate(${i})">修改</a>
+	</td>`
+            str+="</tr>"
+        }
+        document.querySelector('#tab').innerHTML=str;
+    }
+    function del(line) {
+        delete users[line];
+        showTable();
+    }
+    function ipdate(line) {
+        var fom=document.querySelector('#up');
+        curentBeFixLine=line;
+        for (var i in users[line]) {
+            fom[i].value=users[line][i];
+        }
+    }
+    function id(a) {
+        return document.getElementById(a);
+    }
+    function t() {
+        showTable();
+    }
+    function tj() {
+        var aa=document.forms[0];
+        users.push({name:aa.name.value,age:aa.age.value,sex:aa.sex.value,grade:aa.grade.value});
+        showTable();
+    }
+    function qd() {
+        var fomr =document.querySelector('#up');
+        for (var i in users[curentBeFixLine]){
+            users[curentBeFixLine][i]=fomr[i].value;
+        }
+        showTable();
+    }
+</script>
+</body>
+</html>

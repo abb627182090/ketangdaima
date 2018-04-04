@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table id="tbl"></table>
+<script>
+    var users=[
+        {name:'张三',age:19,sex:'男'},
+        {name:'莉莉丝',age:18,sex:'女'},
+        {name:'张五',age:18,sex:'男'},
+        {name:'张六',age:20,sex:'男'},
+        {name:'张七',age:10,sex:'男'},
+        {name:'张8',age:47,sex:'男'},
+    ];
+ users.sort(function(a,b){
+
+       var r= b.age-a.age;
+         if(r==0){
+             return(b.sex.charCodeAt(0)- a.sex.charCodeAt(0));
+         }
+         return r;
+    });
+    //filter,过滤，回调返回false则滤掉
+    users=users.filter(function(a,b,c){
+        return a.age<50 && a.age>=18;
+
+    });
+     users.sort(function(a,b){
+
+       var r= b.age-a.age;
+         if(r==0){
+             return(b.sex.charCodeAt(0)- a.sex.charCodeAt(0));
+         }
+         return r;
+    });
+    //回调返回值组成新的数组
+    var tab_str=users.map(function(a){
+        return `<tr>
+        <td>${a.name}</td>
+        <td>${a.age}</td>
+        <td>${a.sex}</td>
+        </tr>`
+    }).reduce(function(a,b){
+
+        return a+b;
+    });
+
+    /*
+     map====》每一次回调返回的值组成新的数组，新数组的长度和原数组长度一样
+     filter===》回调返回布尔值，true则留着，false则去掉，组成新的数组
+     some===》回调布尔值，只要有一个返回true，则最终结果为true
+     every===>回调布尔值，所有返回true，则最终结果为true
+     reduce==>用来做统计，将每次回调的结果注入到第一个参数中
+     forEach==》普通的迭代
+
+      */
+
+    var a=4576;
+    [100,50,20,5,1].map(function (item){
+        var zhangshu=Math.floor(a/item);
+        a-= zhangshu*item;
+        return zhangshu;
+    }).reduce(function(a,b){
+        return a+b;
+    });
+var tbl=document.querySelector('#tbl');
+    tbl.innerHTML=tab_str;
+
+</script>
+
+</body>
+</html>

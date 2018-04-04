@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    5的阶乘=4的阶乘*5；
+//    4的阶乘=3的阶乘*4；
+//    3的阶乘=2的阶乘*3；
+//    2的阶乘=1的阶乘*2；
+
+function jiecheng(num) {
+    if(num==1)return 1;
+    return num*jiecheng(num-1);
+}
+
+
+function hannuota(num,src,target,guodu) {
+    if(num==0)return;
+    hannuota(num-1,src,guodu,target);
+console.log(`
+将${num}从${src}移动到${target}
+`);
+    hannuota(num-1,b,c,a);
+}
+    hannuota(5,'a','c','b');
+</script>
+
+
+</body>
+</html>

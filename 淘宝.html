@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <style>
+        * { /*样式的重置*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .layong-box {
+            position: absolute;
+        }
+
+        .mid {
+            min-height: 600px;
+            top: 100px;
+        }
+
+        #root {
+
+            /* background: red;*/
+            width: 700px;
+            min-height: 2800px;
+            margin: 0 auto; /*水平居中*/
+            position: relative;
+        }
+
+        #head {
+            /*background: black;*/
+            width: 100%;
+            height: 100px;
+            position: absolute;
+        }
+
+        #left {
+           /* background: yellow;*/
+            width: 80%;
+
+        }
+
+        #rigth {
+           /* background: brown;*/
+            width: 20%;
+            right: 0;
+
+        }
+
+        #foot {
+            background: blue;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+        }
+
+        #nav {
+            width: 100%;
+
+        }
+
+        #nav li {
+            float: left;
+            width: 12.5%;
+            height: 30px;
+            background: #ccc;
+            text-align: center;
+
+        }
+
+        #nav li > a {
+            line-height: 30px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #goods-box > li {
+            width: 33%;
+            float: left;
+            padding: 0.16%;
+            text-align: center;
+
+        }
+
+        #goods-box > li img {
+            width: 90%;
+        }
+        .left {
+           /* position:absolute;
+            left:0;
+            display: inline-block;*/
+            display:inline-block;
+            float:left;
+        }
+        .right {
+            display:inline-block;
+            float:right;
+
+        }
+        #top-10-list img>li {
+            margin:15px 0;
+        }
+        #top-10-list img {
+            width:100%;
+        }
+        #top-10-list-title {
+            margin-bottom: 20px;
+        }
+
+/*.clear-float {
+
+}*/
+    </style>
+</head>
+<body>
+<div id="root">
+    <div id="head" class="layong-box">
+        <ul id="nav">
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+            <li><a href="#"></a>列表项</li>
+        </ul>
+        <h1>淘宝网</h1>
+    </div> <!--页首-->
+    <div id="left" class="layong-box mid">
+        <ul id="goods-box">
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span class="left">￥999.00</span>
+                    <span class="right">10000人付款</span>
+                    <div class="clear-float"></div>
+                </div>
+                <div><a href="#" class="left">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span class="left">太平鸟</span>
+                    <span class="right">浙江 义务</span>
+                </div>
+                <div class="clear-float"></div>
+                <div><span class="left">shangcheng</span>
+                    <span class="right">ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+            <li><img src="L5S2KQ~S$N7{IU@7IHRN4N2.gif" alt="">
+                <div><span>￥999.00</span><span>10000人付款</span></div>
+                <div><a href="#">【包邮】小肥猫，撸猫神器，数量有限，欲购从速。</a></div>
+                <div><span>太平鸟</span><span>浙江 义务</span></div>
+                <div><span>shangcheng</span><span>ww</span></div>
+            </li>
+        </ul>
+    </div><!-- 左边结束-->
+    <div id="rigth" class="layong-box mid">
+        <div id="top-10-list">
+            <div id="top-10-list-title">
+                风云榜前十位
+            </div>
+            <ul>
+                <li>
+                    <img src="u=1209168646,1238926818&fm=27&gp=0.jpg" alt="">
+                    <div><span class="left">￥999</span>
+                        <span class="right">销量：999</span>
+                    </div>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div><!-- 右边结束-->
+    <div id="foot" class="layong-box"></div> <!--页脚-->
+</div>  <!--根元素的结束-->
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var aaa=function(){
+        console.log('aaa');
+    };
+
+    function bbb(){
+        console.log('bbb');
+    };
+//bbb();
+
+    var Actor=function(name){
+        this.name=name;
+        this.show=function(){
+            console.log('我是'+this.name);
+        }
+    }
+
+    var liudehua=new Actor('刘德华');
+            liudehua.show();
+    var liangChaoWei=new Actor('梁朝伟');
+             liangChaoWei.show();
+
+    var name='彭东明';
+    var ss=liangChaoWei.show.bind(window);//让this 指向参数对象
+
+    //方法.bind(this指向的对象)绑定
+function max(a,b){
+    return a>b ? a:b;
+};
+
+    function min(){
+      var arr=  Array.prototype.slice.apply(arguments,[0]);
+        console.log(arr);
+      // console.log(arguments[0],arguments[1]);
+    }
+
+//    var zhuangxiu=function(name){
+//        this.name=name;
+//        this.shuidian=function(){
+//        console.log('交给钥匙'+this.name);
+//        console.log(this.name+'开始施工');
+//            console.log(this.name+"交还钥匙")
+//            }
+//    }
+//
+//    var shuidian=new zhuangxiu('水电工');
+//    shuidian.shuidian();
+//    var nigong=new zhuangxiu('泥工');
+//    nigong.shuidian();
+//   var mugong=new zhuangxiu('木工');
+//    mugong.shuidian();
+//     var youqigong=new zhuangxiu('油漆工');
+//    youqigong.shuidian()
+
+
+
+
+    function House(){
+        this.addr='西山公园路一号碧海蓝天别墅区一号';
+        this.ZhuangXiu=function(visitor){
+            visitor.doThing('钥匙',this.addr);
+        }
+ }
+    function Visitor(type){
+        this.type=type;
+        this.doThing=function(a,addr){
+            console.log(`我是${this.type}工人，我拿到了钥匙$(a)我进行装修`);
+        }
+    }
+
+    var house=new House();
+    house.ZhuangXiu(new Visitor('水电工'));
+    house.ZhuangXiu(new Visitor('木工'));
+    house.ZhuangXiu(new Visitor('油漆工'));
+    house.ZhuangXiu(new Visitor('泥工'));
+</script>
+
+</body>
+</html>

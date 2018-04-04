@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>修改页面</h1>
+<table id="tbl">
+
+</table>
+
+<form id="ff" style="display: none">
+    姓名：<input type="text" name="uName"><br>
+    年龄:<input type="number" name="age" id="n1"><br>
+    籍贯：<input type="text" name="place"><br>
+    民族：<input type="text" name="MinZu"><br>
+    国籍：<input type="text" name="guoji"><br>
+    身高：<input type="text" name="ShenGao"><br>
+    体重：<input type="text" name="TiZhong">KG<br>
+    密码：<input type="password" name="pass"><br>
+    再次输入密码：<input type="password" id="passagian"><br>
+    性别：男<input type="radio" name="sex" value="男" checked>女<input type="radio" name="sex" value="女"><br>
+    <input type="hidden" name="line">
+    <input type="button" value="确认修改" onclick="GaiDong">
+</form>
+<script type="text/javascript">
+
+  var tbl=document.querySelector('tbl');
+  var fom=document.querySelector('ff')
+  var usersInfo=localStorage.getItem('users');
+  if(!usersInfo){
+      alert('用户信息不能为空');
+      throw'用户信息不能为空';// 程序的两种退出方式，return 正常退出 。throw  异常退出
+
+  }
+    usersInfo=JSON.parse(usersInfo);
+  function showTable(usersInfo) {
+
+  var tbl_text=usersInfo.map(function (item,index) {//将数据映射到表格
+      return `<tr id="${item.name}">
+      <td>${item.name}</td>
+      <td>${item.pass}</td>
+      <td> <a href="javascript:edit("${item.name}",${index})">修改</a></td>
+      </tr>`;
+  }).join("");//将数组的值拼接成表格
+tbl.innerHTML=tbl_text;
+      }
+  showTable(usersInfo);
+  function edit(id,index) {//用户点击编辑事件
+      fom.style.display='block';
+     fom.uName.value=usersInfo[index].name;//用户名注入表单
+      fom.pass.value=usersInfo[index].pass;//密码注入表单
+      fom.line.value=index;//修改行数注入到表单的隐藏域
+  }
+    var gaidong=document.getElementById('GaiDong')
+    gaidong.onclick= function (e) {
+        //1、让表单隐藏
+        fom.style.display='none';
+        //2、修改对应的行
+      var aa=usersInfo[ fom.line.value];
+        aa.name=fom.uName.value;
+        aa.pass=fom.pass.value;
+        //3、修改的信息重新映射到表格
+       showTable(usersInfo);
+        //4、修改的信息要重新
+        localStorage.setItem('users',JSON.stringify(usersInfo));
+    };
+</script>
+</body>
+</html>

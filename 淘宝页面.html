@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .layong-box {
+            position: absolute;
+        }
+
+        .mid {
+            min-height: 600px;
+            top: 100px;
+        }
+
+        #left > img {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+
+        }
+
+        #root {
+            /* background:red;*/
+            width: 1000px;
+            min-height: 1800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #head {
+            /*  background: black;*/
+            width: 100%;
+            height: 100px;
+        }
+
+        #left {
+            /* background:yellow;*/
+            width: 80%;
+
+        }
+
+        #right {
+            /* background: rosybrown;*/
+            width: 20%;
+            right: 0;
+
+        }
+
+        #foot {
+            /*background: blue;*/
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+        }
+
+        .biaoti {
+
+        }
+
+        #nav {
+            width: 100%;
+            border: 1px solid #ccc;
+
+        }
+
+        #nav li {
+            float: left;
+            width: 12.5%;
+            height: 30px;
+            background: #ccc;
+            text-align: center;
+
+        }
+
+        #nav li > a {
+            line-height: 30px;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #nav li:hover {
+            background: blue;
+        }
+
+        .fubiao {
+            top: 30px;
+            position: absolute;
+            left: 820px;
+        }
+
+        .TT {
+            position: absolute;
+
+            left: 300px;
+
+        }
+
+        .aa {
+            color: red;
+        }
+
+        .bb {
+            color: rgba(0, 0, 0, 0.38)
+        }
+
+        .ss {
+            font-size: 3.2em;
+            color: red;
+        }
+
+        .goumai {
+            width: 120px;
+            height: 40px;
+            float: top;
+            position: relative;
+            top: 55px;
+            left: 20px;
+            color: rebeccapurple;
+        }
+
+        .gouwuche {
+            position: relative;
+            top: 55px;
+            left: 50px;
+            width: 120px;
+            height: 40px;
+            color: rebeccapurple;
+        }
+
+        .fff img {
+            width: 64px;
+            height: 18px;
+        }
+
+        .fff {
+            height: 18px;
+            font-size: 0.8em;
+            color: rgba(0, 0, 0, 0.45);
+        }
+
+        .jiage {
+            text-decoration: line-through;
+            position: relative;
+            left: 66px;
+        }
+
+        .cuxiao {
+            position: relative;
+            left: 50px;
+            font-size: 30px;
+            color: #FF0036;;
+        }
+
+        #xiangqing {
+            position: relative;
+            top: 350px;
+            height: 30px;
+            width: 210px;
+            padding: 10px;
+            border: 1px solid #ccc;
+
+        }
+
+        #xiangqing a {
+            color: #000;
+        }
+
+        #xiangqing a:hover {
+            color: deeppink;
+        }
+
+        #xiangqing a:active {
+            color: red;
+        }
+
+        #ww img {
+            position: relative;
+            top: 350px;
+        }
+
+        .tubiaoti {
+            position: relative;
+            top: 345px;
+            color: deeppink;
+            text-align: center;
+        }
+
+        #ee img {
+            position: relative;
+            top: 350px;
+        }
+
+        #pinglun img {
+            position: relative;
+            top: 350px;
+        }
+
+        .yincang {
+            display: none;
+        }
+
+        .kk img {
+            position: relative;
+            top: 338px;
+            margin: 0;
+            padding: 0;
+            width: 790px;
+
+        }
+
+        .youxuanfu {
+            position: relative;
+            left: 800px;
+            top: 260px;
+            color: red;
+
+        }
+
+        .xuanfutiao img {
+            top: 67px;
+            position: relative;
+            right: 300px;
+
+        }
+
+        .foot_tu img {
+            position: relative;
+
+            top: 480px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div id="head" class="layong-box">
+        <img src="天猫.png" alt="">
+        <div class="biaoti"><span><h4>天猫旗舰店</h4></span><span class="fubiao">天猫正品给你更好的生活</span></div>
+        <ul id="nav">
+            <li><a href="#"></a>全部商品分类</li>
+            <li><a href="#"></a>首页</li>
+            <li><a href="#"></a>手机</li>
+            <li><a href="#"></a>智能生活</li>
+            <li><a href="#"></a>笔记本平板电脑</li>
+            <li><a href="#"></a>耳机音响&配件</li>
+            <li><a href="#"></a>手机壳</li>
+            <li><a href="#"></a>手机套餐</li>
+        </ul>
+    </div>
+    <div id="left" class="layong-box mid">
+        <img src="shoujitaitou.jpg" alt="">
+        <span class="TT"><h4>当天发送游戏手柄/护眼仪华为/honor/荣耀 畅玩7C手机官方旗舰店</h4>
+        <span class="aa">现货当天发 送电源 套餐+0元任选</span>
+          <div class="fff"><img src="商城.png" alt=""><span>全天猫实物商品通用</span></div>
+            <div><span class="bb">价格:</span><span class="jiage">￥</span><span class="jiage">999</span></div>
+            <div><span class="bb">促销价:</span><span class="cuxiao">￥</span><span class="cuxiao">600.00</span></div>
+
+           <div><span class="bb">运费:</span>
+               <span class="ss">当然是包邮！！！</span>
+           </div>
+            <button class="goumai">立即购买</button> <button class="gouwuche">放入购物车</button>
+            <div class="xuanfutiao"><img src="TB1U3r4PpXXXXX2apXXXXXXXXXX-990-50.png" alt=""></div>
+        </span>
+        <div id="xiangqing">
+            <tr>
+                <td><a href="javascript:show(0)">商品详情</a></td>
+                <td><a href="javascript:show(1)">规格参数</a></td>
+                <td><a href="javascript:show(2)">累计评价</a></td>
+            </tr>
+        </div>
+        <div id="sdsd">
+            <div class="child-content yincang">
+                <div id='ww'>
+                    <div class="tubiaoti"><h3>18：00之前付款的订单全部当天发出，未发赔10元！！</h3></div>
+                    <img src="TB2_208db1YBuNjSszeXXablFXa_!!268451883.jpg" alt="">
+                </div>
+                <div class="kk"><img src="QQ图片20180321222123.png" alt=""></div>
+            </div>
+
+            <div id="ee" class="child-content yincang"><img src="QQ图片20180321214605.png" alt="">
+            </div>
+            <div id="pinglun" class="child-content yincang"><img src="QQ图片20180321215431.png" alt=""></div>
+        </div>
+    </div>
+    <div id="right" class="layong-box mid">
+        <div><img src="右边悬浮1.jpg" alt=""></div>
+    </div>
+    <div class="youxuanfu">销量破百万！</div>
+    <div id="foot" class="layong-box"></div>
+    <!--<div class="foot_tu"><img src="TB2CJ6YdXGWBuNjy0FbXXb4sXXa_!!268451883.jpg" alt=""></div>-->
+</div>
+<script>
+    var rr = document.getElementById('sdsd');
+
+    function show(e) {
+        /*   debugger;*/
+        for (var i = 0; i < 3; i++) { /*因为有四个元素*/
+            if (e == i) { /*被点击的当前对应的div*/
+                rr.children[e].classList.remove('yincang');
+            }
+            else {
+                rr.children[i].classList.add('yincang');
+            }
+
+        }
+    }
+
+
+</script>
+</body>
+</html>
